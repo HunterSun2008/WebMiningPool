@@ -15,9 +15,9 @@ ENTRYPOINT ["dotnet", "WebMiningPool.dll"]
 # for mysql
 # 1. sudo docker pull mysql/mysql-server:8.0
 # 2. sudo docker run --name=mysql-dev -p 3306:3306 -d mysql/mysql-server:8.0
-# 3. sudo docker logs mysql1 2>&1 | grep GENERATED
+# 3. sudo docker logs mysql-dev 2>&1 | grep GENERATED
 #       GENERATED ROOT PASSWORD: Axegh3kAJyDLaRuBemecis&EShOs
-# 4. sudo docker exec -it mysql1 mysql -uroot -p
+# 4. sudo docker exec -it mysql-dev mysql -uroot -p
 # 5. ALTER USER 'root'@'localhost' IDENTIFIED BY 'password';
 #   5.1 CREATE USER 'admin'@'localhost' IDENTIFIED BY 'admin1@3';
 #   5.2 CREATE USER 'admin'@'%' IDENTIFIED BY 'admin1@3';

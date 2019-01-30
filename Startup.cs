@@ -11,11 +11,14 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.FileProviders;
+using MvcMovie.Models;
+using Microsoft.EntityFrameworkCore;
+using MySql.Data.EntityFrameworkCore;
 
 namespace WebMiningPool
 {
     public class Startup
-    { 
+    {
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -33,10 +36,14 @@ namespace WebMiningPool
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
-
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
             services.AddDirectoryBrowser();
+
+            services.AddDbContext<MvcMovieContext>(options =>
+            {
+                options.UseMySQL(Configuration.GetConnectionString("MovieContext"));
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
