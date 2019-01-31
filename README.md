@@ -13,6 +13,7 @@
     5.3 GRANT ALL PRIVILEGES ON *.* TO 'admin'@'localhost';
     5.4 GRANT ALL PRIVILEGES ON *.* TO 'admin'@'%';
     5.5 FLUSH PRIVILEGES;
+6. sudo docker container start mysql-dev
 ```
 
 #Add required NuGet packages
