@@ -8,10 +8,14 @@
     <a class="nav-link" asp-area="" asp-controller="Miners" asp-action="Index">Miners</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" asp-area="" asp-controller="Movies" asp-action="Details" asp-route-id="1">Detail</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#">Disabled</a>
+    <a class="nav-link" asp-area="" asp-controller="Miners" asp-action="Details" asp-route-id="4">Detail</a>
   </li>
 </ul>
 
+<script src="~/lib/jquery/dist/jquery.js"></script>
+<script type="text/javascript">
+  var index = 1;
+  $(document).ready(function(){
+  $('#myTab li:nth-child(@Model) a').tab('show')
+  });
+</script>
