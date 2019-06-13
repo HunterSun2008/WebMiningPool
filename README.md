@@ -17,9 +17,11 @@
 ```
 
 #Add required NuGet packages
+```
     dotnet add package Microsoft.VisualStudio.Web.CodeGeneration.Design
     dotnet add package MySql.Data.EntityFrameworkCore
     dotnet add package SapientGuardian.EntityFrameworkCore.MySql
+```
 
 ## set connection string
     "ConnectionStrings": {
