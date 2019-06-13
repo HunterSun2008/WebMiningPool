@@ -1,6 +1,6 @@
 # WebMiningPool
 
-##Use Mysql running in docker
+## Use Mysql running in docker
 ```
 1. sudo docker pull mysql/mysql-server:8.0
 2. sudo docker run --name=mysql-dev -p 3306:3306 -d mysql/mysql-server:8.0
@@ -16,7 +16,7 @@
 6. sudo docker container start mysql-dev
 ```
 
-#Add required NuGet packages
+## Add required NuGet packages
 ```
     dotnet add package Microsoft.VisualStudio.Web.CodeGeneration.Design
     dotnet add package MySql.Data.EntityFrameworkCore
